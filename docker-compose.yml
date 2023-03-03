@@ -10,10 +10,12 @@ services:
       DB_HOST: ${DB_CONTAINER_NAME}
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
+      DATABASE_URL: ${DATABASE_URL}
     depends_on:
       - db
     volumes:
     - .:/usr/src/app
+    - /usr/src/app/node_modules/bcrypt
 
   db:
     container_name: ${DB_CONTAINER_NAME}
