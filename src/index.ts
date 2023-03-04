@@ -5,7 +5,17 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import * as dotenv from 'dotenv';
 
+import { appDataSource } from './db/data-source';
 import { routes } from './routes';
+
+appDataSource
+    .initialize()
+    .then(() => {
+        console.log('Data Source has been initialized!');
+    })
+    .catch((err) => {
+        console.error('Error during Data Source initialization:', err);
+    });
 
 dotenv.config();
 
