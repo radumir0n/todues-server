@@ -12,6 +12,9 @@
     "strict": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
   },
   "ts-node": {
     "esm": true,

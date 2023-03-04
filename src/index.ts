@@ -5,11 +5,9 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import * as dotenv from 'dotenv';
 
-import { connectToDB } from './db';
 import { routes } from './routes';
 
 dotenv.config();
-connectToDB();
 
 const app = express();
 const { PORT } = process.env;
